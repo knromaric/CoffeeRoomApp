@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoffeeRoom.Pages.ReservationPage">
+             x:Class="CoffeeRoom.Pages.ReservationPage"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to RESERVATION PAGE"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="10">
+            <Entry Placeholder="Name" x:Name="EntName" />
+            <Entry Placeholder="Email" x:Name="EntEmail"/>
+            <Entry Placeholder="Phone" x:Name="EntPhone" />
+            <Entry Placeholder="Total People" x:Name="EntTotalPeople"/>
+            <Label Text="Booking Date" FontSize="Medium"/>
+            <DatePicker Format="D" x:Name="DpBookingDate"/>
+            <Label Text="Booking Time" FontSize="Medium"/>
+            <TimePicker x:Name="TpBookingTime"/>
+            <Button x:Name="BtnBookTable" 
+                    Text="Book Table" 
+                    TextColor="White" 
+                    Clicked="BtnBookTable_Clicked"
+                    FontSize="Medium" 
+                    BackgroundColor="#dc004e"
+                    Margin="0,30,0,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

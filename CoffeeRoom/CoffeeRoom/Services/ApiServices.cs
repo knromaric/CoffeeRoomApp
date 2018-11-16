@@ -13,6 +13,7 @@ namespace CoffeeRoom.Services
         private readonly string url = "http://coffeeroom.gear.host/api/menus";
         public async Task<List<Menu>> GetMenus()
         {
+            string url = "http://coffeeroom.gear.host/api/menus";
             var httpClient = new HttpClient();
             var jsonResponse = await httpClient.GetStringAsync(url);
             return JsonConvert.DeserializeObject<List<Menu>>(jsonResponse);
@@ -20,6 +21,7 @@ namespace CoffeeRoom.Services
 
         public async Task<bool> ReserveTable(Reservation reservation)
         {
+            string url = "http://coffeeroom.gear.host/api/reservations";
             var httpClient = new HttpClient(); 
             var jsonReservation = JsonConvert.SerializeObject(reservation);
             var content = new StringContent(jsonReservation, Encoding.UTF8, "application/json");
