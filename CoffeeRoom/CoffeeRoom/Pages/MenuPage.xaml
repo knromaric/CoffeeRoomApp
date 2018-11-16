@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoffeeRoom.Pages.MenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to MENU PAGE!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvMenu" ItemSelected="LvMenu_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="230"/>
+                            <BoxView Color="Black" Opacity="0.4"/>
+                            <Label Text="{Binding Name}"
+                                   FontSize="30"
+                                   TextColor="LightGoldenrodYellow"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
