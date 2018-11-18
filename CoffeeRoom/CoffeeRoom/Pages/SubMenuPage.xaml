@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="CoffeeRoom.Pages.SubMenuPage">
     <ContentPage.Content>
         <ListView SeparatorVisibility="None" HasUnevenRows="True" x:Name="LvSubMenu">
@@ -8,12 +9,20 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-                            <Image HeightRequest="260" Source="{Binding Image}" Aspect="AspectFill"/>
+                            <Image HeightRequest="270" Source="{Binding Image}" Aspect="Fill" />
+                            <!--<ffimageloading:CachedImage HeightRequest="270"
+                                                        LoadingPlaceholder="placeholderimage.png"
+                                                        Aspect="Fill"
+			                                            DownsampleToViewSize="true"
+			                                            Source = "{Binding Image}"
+                                                        CacheType="All" >
+                                
+                            </ffimageloading:CachedImage>-->
                             <BoxView BackgroundColor="Black" Opacity="0.4" />
                             <StackLayout HorizontalOptions="Start" VerticalOptions="End" Margin="5">
-                                <Label Text="{Binding Name}" TextColor="Yellow" FontAttributes="Bold" FontSize="Large"/>
-                                <Label Text="{Binding Price}" TextColor="white"  FontSize="Medium"/>
-                                <Label Text="{Binding Description}" TextColor="white"  FontSize="Small" />
+                                <Label Text="{Binding Name}" TextColor="Yellow" FontAttributes="Bold" FontSize="40"/>
+                                <Label Text="{Binding Price}" TextColor="#ff9234"  FontSize="25" FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" TextColor="white"  FontSize="Medium" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>

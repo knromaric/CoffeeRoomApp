@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="CoffeeRoom.Pages.MenuPage">
     <ContentPage.Content>
         <Grid>
@@ -10,9 +11,15 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid>
-                                <Image Source="{Binding Image}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="255"/>
+                                <Image Source="{Binding Image}" Aspect="Fill" HeightRequest="255"/>
+                                <!--<ffimageloading:CachedImage HeightRequest="255"
+                                                            LoadingPlaceholder="placeholderimage.png"
+                                                            Aspect="Fill"
+			                                                DownsampleToViewSize="true"
+			                                                Source = "{Binding Image}"
+                                                            CacheType="All">
+                                    
+                                </ffimageloading:CachedImage>-->
                                 <BoxView Color="Black" Opacity="0.4"/>
                                 <Label Text="{Binding Name}"
                                    FontSize="30"

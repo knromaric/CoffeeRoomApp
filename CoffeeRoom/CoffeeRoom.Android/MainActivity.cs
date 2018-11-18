@@ -20,6 +20,8 @@ namespace CoffeeRoom.Droid
             base.OnCreate(bundle);
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+           // FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+
             LoadApplication(new App());
         }
 
