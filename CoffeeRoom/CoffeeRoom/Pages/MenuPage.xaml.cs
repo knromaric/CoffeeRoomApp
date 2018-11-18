@@ -39,6 +39,7 @@ namespace CoffeeRoom.Pages
             
 
             LvMenu.ItemsSource = _menus;
+            BusyIndicator.IsRunning = false;
         }
 
         private void LvMenu_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -50,8 +51,8 @@ namespace CoffeeRoom.Pages
                 var subMenus = selectedMenu.SubMenus;
                 Navigation.PushAsync(new SubMenuPage(subMenus));
             }
-            
-            
+
+            ((ListView)sender).SelectedItem = null;   
         }
     }
 }

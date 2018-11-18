@@ -15,9 +15,10 @@
             <TimePicker x:Name="TpBookingTime"/>
             <Button x:Name="BtnBookTable" 
                     Text="Book Table" 
+                    FontAttributes="Bold"
                     TextColor="White" 
                     Clicked="BtnBookTable_Clicked"
-                    FontSize="Medium" 
+                    FontSize="Large" 
                     BackgroundColor="#dc004e"
                     Margin="0,30,0,0"/>
         </StackLayout>

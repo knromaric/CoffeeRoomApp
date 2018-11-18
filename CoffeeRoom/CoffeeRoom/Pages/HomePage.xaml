@@ -4,6 +4,10 @@
              xmlns:pages ="clr-namespace:CoffeeRoom.Pages; assembly=CoffeeRoom"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarSelectedItemColor ="Yellow"
+             android:TabbedPage.BarItemColor ="White"
+             BarBackgroundColor="#f50057"
+             Title="CoffeeRoom"
              x:Class="CoffeeRoom.Pages.HomePage">
     <pages:MenuPage Title="Menu" Icon="menu.png"/>
     <pages:ReservationPage Title="Reservation" Icon="reservation.png"/>

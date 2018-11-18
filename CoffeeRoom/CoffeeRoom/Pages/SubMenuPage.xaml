@@ -8,7 +8,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-                            <Image HeightRequest="230" Source="{Binding Image}" Aspect="AspectFill"/>
+                            <Image HeightRequest="260" Source="{Binding Image}" Aspect="AspectFill"/>
                             <BoxView BackgroundColor="Black" Opacity="0.4" />
                             <StackLayout HorizontalOptions="Start" VerticalOptions="End" Margin="5">
                                 <Label Text="{Binding Name}" TextColor="Yellow" FontAttributes="Bold" FontSize="Large"/>
